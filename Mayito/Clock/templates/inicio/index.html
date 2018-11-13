@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,14 +19,14 @@
 		<div class="navbar-fixed">
 		  <nav>
 		    <div class="nav-wrapper z-depth-3">
-		      <a href="#!" class="brand-logo hide-on-med-and-up navsmall">Logo</a><!--logo mobile-->
-		      <a href="#!" class="brand-logo hide-on-small-only left logonav">Logo</a>
+		     <a href="{% url 'inicio' %}" class="brand-logo hide-on-med-and-up navsmall">Logo</a><!--logo mobile-->
+		      <a href="{% url 'inicio' %}" class="brand-logo hide-on-small-only left logonav">Logo</a>
 		      <a href="#" data-target="mobile-demo" class="show-on-small hide-on-med-and-up sidenav-trigger"><i class="material-icons">menu</i></a><!--logo mobile-->
 		      <ul class="right hide-on-small-only">
 		      
 		      <!--boton de registro-->
-		      <li><a class="modal-trigger" href="#modal2">Registrame</a></li>
-		          <!-- Menu que aparece al dar click -->
+		      <li><a class="modal-trigger" href="{% url 'registrate' %}">Registrame</a></li>
+		        <!--   Menu que aparece al dar click 
 		       
 			  <div id="modal2" class="modal">
 			    <div class="modal-content">
@@ -43,12 +43,13 @@
 			    <div class="modal-footer">
 			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Registrarme</a>
 			    </div>
-			  </div>
+			  </div> -->
 				
 				  <!--boton de registro-->
-		        <li><a class="modal-trigger" href="#modal1">Inicia Sesion</a></li>
-
-			<!-- Menu que aparece al dar click -->
+		        <li><a class="modal-trigger" href="{% url 'login' %}">Inicia Sesion</a></li>
+		         <li><a class="modal-trigger" href="{% url 'admin:index' %}">admin</a></li>
+<!-- 			
+			 Menu que aparece al dar click 
 			  <div id="modal1" class="modal">
 			    <div class="modal-content">
 			      <h4>Iniciar Sesion</h4>
@@ -60,7 +61,7 @@
 			    <div class="modal-footer">
 			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Iniciar sesion</a>
 			    </div>
-			  </div>
+			  </div> -->
 			  
 		        <!--SEARCH BAR-->
 		        <li><div class="input-field">
