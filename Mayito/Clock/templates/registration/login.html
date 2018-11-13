@@ -1,0 +1,8 @@
+<div>
+	<h1>Inicia Sesion</h1>
+	<form method="POST">
+		{% csrf_token %} <!-- Genera un token aleatoriamente para ocultar el id -->
+		{{ form.as_p }} <!-- Traeme el formulario como etiquetas p -->
+		<button type="submit">Enviar</button>
+	</form>
+</div>

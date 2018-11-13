@@ -1,0 +1,128 @@
+
+
+.parallax-container{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.texto-encima{
+    font-size: 2vw;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-content: center;
+    float: center;
+    font-size: 50px;
+    color: white;
+    padding: 40px;
+}
+.texto-encima2{
+    font-size: 2vw;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-content: center;
+    float: center;
+    font-size: 50px;
+    color: white;
+    padding: 0px;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logonav{
+	padding-left: 30px;
+}
+
+header{
+	background: url(img/portada.jpg) no-repeat fixed center;
+}
+
+body {
+	background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .navsmall{
+  	padding: 0px;
+  }
+
+#search{
+	background-color: lightgray;
+}
+
+  .material-icons{
+  	color: black;
+  }
+
+.fila1{
+	background-color: black;
+}
+h1{
+	color: white;
+}
+
+h3{
+	margin: 0px;
+	padding: 15px;
+	color: white;
+	text-align: center;
+}
+
+  .portada{
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  .nav-wrapper{
+  	padding: 0px;
+  	margin: 0px;
+  	background-color: white;
+  	color: black;
+  	padding-left: 0px;
+  	padding-right: 0px;
+  }
+
+  .nav-wrapper a{
+  	color: gray;
+  }
+
+  .nav-wrapper ul a{
+  	color: black;
+  }
+
+  .row{
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  .page-footer{
+  	background-color: lightgray;
+  	margin-bottom: 0px;
+  	padding-bottom: 0px;
+  }
+
+   .page-footer li{
+  	background-color: lightgray;
+  	color: black;
+  }
+
+  .card-image img{
+  	height: 50%;
+  	width: auto;
+  }
+
+  .footer-copyright{
+  	background-color: lightgray;
+  }
