@@ -29,15 +29,14 @@
 	<div class="navbar-fixed ">
 		<nav>
 			<div class="nav-wrapper">
-				<a href="index.html" class="brand-logo left hide-on-small-only"><img src="{% static 'img/relojlogo.png'%}" height="50" width=auto alt="auto"></a>
-				<a href="index.html" class="brand-logo center hide-on-med-and-up show-on-small-only"><img src="{% static 'img/relojlogo.png'%}" height="35" width=auto alt="auto"></a>
+				<a href="{% url 'inicio2' %}" class="brand-logo left hide-on-small-only"><img src="{% static 'img/relojlogo.png'%}" height="50" width=auto alt="auto"></a>
+				<a href="{% url 'inicio2' %}" class="brand-logo center hide-on-med-and-up show-on-small-only"><img src="{% static 'img/relojlogo.png'%}" height="35" width=auto alt="auto"></a>
 
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-up show-on-small"><i class="material-icons">menu</i></a>
 
 				<ul class="right hide-on-small-only">
-					<li><a href="registrarse.html">Colecciones</a></li>
+					<li><a href="{% url 'colecciones' %}">Colecciones</a></li>
 					<li><a href="iniciarsesion.html">Carrito</a></li>
-					<li><a href="iniciarsesion.html">Citas</a></li>
 					<li><a href="{% url 'admin:index' %}">Admin</a></li>
 				</ul>
 			</div>
@@ -48,9 +47,8 @@
 	<!-- SIDE NAVBAR -->
 	<ul class="sidenav show-on-small-only hide-on-med-and-up" id="mobile-demo">
 		<li><a class="sidenav-close white-text" href="#!"><i class="material-icons white-text">arrow_back</i></a></li>   
-		<li><a href="registrarse.html">Colecciones</a></li>
+		<li><a href="{% url 'colecciones' %}">Colecciones</a></li>
 		<li><a href="iniciarsesion.html">Carrito</a></li>
-		<li><a href="iniciarsesion.html">Citas</a></li>
 		<li><a href="{% url 'admin:index' %}">Admin</a></li>
 
 	</ul>
@@ -124,31 +122,30 @@
 
 	
 	<!--FOOTER-->
-	<footer class="page-footer">
-		<div class="">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="black-text ">Footer Content</h5>
-					<p class="black-text  text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
-						<li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
-						<li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright ">
-			<div class="container">
-				© 2018 Copyright 
-				<a class="black-text text-lighten-4 right" href="#!">More Links</a>
-			</div>
-			<div></div>
-		</div>
+	<footer class="page-footer center">
+		<div class="row">
+          <div class="col l4 s12">
+            <h6 class="white-text">Síguenos</h6>
+            <ul>
+              <a class="github-button" href="https://github.com/GockLdk" aria-label="Follow @amairanysolanamejia on GitHub">Follow @GockLdk</a><br>
+              <a class="github-button" href="https://github.com/anallely753" aria-label="Follow @amairanysolanamejia on GitHub">Follow @anallely753</a><br>
+              <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/KarinaFloG" aria-label="Follow @GodieSillasca on GitHub">Follow @GodieSillasca</a>
+            </ul>
+          </div>
+           <div class="col l4 s12 ayuda">
+            
+          </div>
+          <div class="col l4 s12 ayuda">
+            <h6 class="white-text">¿Necesitas ayuda?</h6>
+            <p class="white-text">Llámanos al 5134.0034<br>
+            o al 01800.367.8737</p>
+          </div>
+        </div>
+      <div class="row todos center white-text">
+           Todos los derechos reservados  |  ANMADI ® 2018 
+      </div>
+      <br>
 	</footer>
 
 </body>

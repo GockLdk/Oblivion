@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def inicio(request):
 	return render(request,'inicio/index.html')
+
+def coleccion(request):
+	return render(request,'inicio/coleccion.html')
