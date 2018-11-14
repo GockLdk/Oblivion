@@ -2,193 +2,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+
 	<meta charset="UTF-8">
-	<title>Clocks</title>
+	<title>Document</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
-	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Code+Pro" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet"> 
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css' %}"  media="screen,projection"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
-<body>
 
-	<header>
+<body class="index">
+
+
+	<!-- NAVBAR -->
+	<div class="navbar-fixed ">
+		<nav>
+			<div class="nav-wrapper">
+				<a href="{% url 'inicio' %}" class="brand-logo left hide-on-small-only"><img src="{% static 'img/relojlogo.png'%}"" height="50" width=auto alt="auto"></a>
+				<a href="{% url 'inicio' %}" class="brand-logo center hide-on-med-and-up show-on-small-only"><img src="{% static 'img/relojlogo.png'%}" height="35" width=auto alt="auto"></a>
+
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-up show-on-small"><i class="material-icons">menu</i></a>
+
+				<ul class="right hide-on-small-only">
+					<li><a href="{% url 'registrate' %}">Registrarse</a></li>
+					<li><a href="{% url 'login' %}">Iniciar Sesion</a></li>
+					<li><a href="coleccion.html">Coleccion</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
 	
-		<div class="row">
-		 <!--NAVBAR STICKY PARA PANTALLA GRANDE-->
-		<div class="navbar-fixed">
-		  <nav>
-		    <div class="nav-wrapper z-depth-3">
-		     <a href="{% url 'inicio' %}" class="brand-logo hide-on-med-and-up navsmall">Logo</a><!--logo mobile-->
-		      <a href="{% url 'inicio' %}" class="brand-logo hide-on-small-only left logonav">Logo</a>
-		      <a href="#" data-target="mobile-demo" class="show-on-small hide-on-med-and-up sidenav-trigger"><i class="material-icons">menu</i></a><!--logo mobile-->
-		      <ul class="right hide-on-small-only">
-		      
-		      <!--boton de registro-->
-		      <li><a class="modal-trigger" href="{% url 'registrate' %}">Registrame</a></li>
-		        <!--   Menu que aparece al dar click 
-		       
-			  <div id="modal2" class="modal">
-			    <div class="modal-content">
-			      <h4>Registro</h4>
-			       <label for="last_name">Nombre</label>
-			      <input id="last_name" type="text">
-		          <label for="last_name">Usuario</label>
-		          <input id="last_name" type="text">
-		          <label for="last_name">Contraseña</label>
-			      <input id="last_name" type="text">
-		          <label for="last_name">Confirmar contraseña</label>
-		          <input id="last_name" type="text">
-			    </div>
-			    <div class="modal-footer">
-			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Registrarme</a>
-			    </div>
-			  </div> -->
-				
-				  <!--boton de registro-->
-		        <li><a class="modal-trigger" href="{% url 'login' %}">Inicia Sesion</a></li>
-		         <li><a class="modal-trigger" href="{% url 'admin:index' %}">admin</a></li>
-<!-- 			
-			 Menu que aparece al dar click 
-			  <div id="modal1" class="modal">
-			    <div class="modal-content">
-			      <h4>Iniciar Sesion</h4>
-			       <label for="last_name">Last Name</label>
-			      <input id="last_name" type="text">
-		          <label for="last_name">Last Name</label>
-		          <input id="last_name" type="text">
-			    </div>
-			    <div class="modal-footer">
-			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Iniciar sesion</a>
-			    </div>
-			  </div> -->
-			  
-		        <!--SEARCH BAR-->
-		        <li><div class="input-field">
-		          <input id="search" type="search" required>
-		          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-		          <i class="material-icons">close</i>
-		        </div></li>			       
-		      </ul>
-		    </div>
-		  </nav>
+	<!-- SIDE NAVBAR -->
+	<ul class="sidenav show-on-small-only hide-on-med-and-up" id="mobile-demo">
+		<li><a class="sidenav-close white-text" href="#!"><i class="material-icons white-text">arrow_back</i></a></li>   
+		<li><a href="{% url 'inicio' %}" class="brand-logo white-text">Logo</a></li>
+		<li><a href="{% url 'registrate' %}" class="white-text">Registrarse</a></li>
+		<li><a href="{% url 'login' %}" class="white-text">Iniciar Sesion</a></li>
+		<li><a href="registrarse.html">Colecciones</a></li>	
 
-			 <!--MENU DROPDOWN MOBILE-->
-		  <ul class="sidenav" id="mobile-demo">
-		  	<a href="#!" class="brand-logo hide-on-med-and-up navsmall">Logo</a>
-		  	<br>
-		    <li><a href="sass.html">Registrate</a></li>
-		    <li><a class="modal-trigger" href="#modal1">Inicia Sesion</a></li>
+	</ul>
 
 
-		  </ul>    
+	<div class="carousel carousel-slider center" data-indicators="true">
+		<div class="carousel-fixed-item center">
+			<a class="btn waves-effect white grey-text darken-text-2">button</a>
+		</div>
+		<div class="carousel-item firstp red white-text" href="#one!">
+			<h2>First Panel</h2>
+			<p class="white-text">This is your first panel</p>
+		</div>
+		<div class="carousel-item firstp  amber white-text" href="#two!">
+			<h2>Second Panel</h2>
+			<p class="white-text">This is your second panel</p>
+		</div>
+		<div class="carousel-item firstd  green white-text" href="#three!">
+			<h2>Third Panel</h2>
+			<p class="white-text">This is your third panel</p>
+		</div>
+		<div class="carousel-item  firstp  blue white-text" href="#four!">
+			<h2>Fourth Panel</h2>
+			<p class="white-text">This is your fourth panel</p>
+		</div>
+	</div>
 
-		  </div>
-		  </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.carousel.carousel-slider').carousel({ fullWidth: true });
+		});
+	</script>
 
-	</header>
+	<!--"NOVEDADES, CARDS"-->
+	<div class=" row fila1">
+		<div class="container"> 		
+			<h3 style="font-size:4.5vh" >Novedades y Eventos</h3>
+			<div class="row">
+				<!--CARDS 1-->
+				<div class="col m6 s12 iframs left">
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHublot%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=141494142548039" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<!--CARDS 2-->
+				<div class="col m6 s12 iframs">					
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHublot%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=141494142548039" width="340" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+				</div>
+			</div>
 
-	 <!--FOTO DEL HOMBRE GUAPO :B-->
- 	
-	<div class="row">
-  	<div><img class="responsive-img" src="{% static 'img/portada.jpg'%}" alt="Mark Phillips"></div>
-  	</div>
-  
+			<h3 style="font-size:5.5vh" >Colección</h3>
+			<!--"CARDS 2a row"-->
+
+			<div class="row">
+				<!--CARDS 1-->
+				<div class="col m6 s6">					
+					<img src="{% static 'img/reloj1.png' %}" data-caption="A picture of a way with a group of trees in a park" class="materialboxed responsive-img" alt="">
+				</div>
+				<!--CARDS 2-->
+				<div class="col m6 s6">
+					
+					<img src="{% static 'img/reloj2.png' %}" data-caption="A picture of a way with a group of trees in a park" class="materialboxed responsive-img" alt="">
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
 	
-	 <!--"NOVEDADES, CARDS"-->
-	 <div class=" row fila1">
- 	<div class="container"> 		
- 		<h3 style="font-size:5vw" >Novedades y Eventos</h3>
- 		<div class="row">
- 			 <!--CARDS 1-->
-		    <div class="col m6 s12">
-		      <div class="card medium">
-		        <div class="card-image">
-		          <img class="responsive-img" src="{% static 'img/reloj3.png'%}">
-		          <span class="card-title">Card Title</span>		          
-		        </div>
-		        <div class="card-content">
-		          <p>Aqui pensaba meter videos o algo cool</p>
-		           <p><a href="#">This is a link</a></p>
-		        </div>
-		      </div>
-		    </div>
-		     <!--CARDS 2-->
-		    <div class="col m6 s12">
-		      <div class="card medium">
-		        <div class="card-image">
-		          <img src="{% static 'img/reloj2.png'%}">
-		          <span class="card-title">Card Title</span>		          
-		        </div>
-		        <div class="card-content">
-		          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-		        </div>
-		      </div>
-		    </div>
-  </div>
+	<!--FOOTER-->
+	<footer class="page-footer">
+		<div class="">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="black-text ">Footer Content</h5>
+					<p class="black-text  text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
+						<li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
+						<li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
+						<li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright ">
+			<div class="container">
+				© 2018 Copyright 
+				<a class="black-text text-lighten-4 right" href="#!">More Links</a>
+			</div>
+			<div></div>
+		</div>
+	</footer>
 
-	<h3 style="font-size:5vw" >Coleccion</h3>
-	 <!--"CARDS 2a row"-->
-	<div class="row">
- 			 <!--CARDS 1-->
-		    <div class="col m6 s12">
-		      <div class="card medium">
-		        <div class="card-image">
-		          <img src="{% static 'img/reloj1.png'%}">
-		          <span class="card-title">Card Title</span>		          
-		        </div>
-		        <div class="card-content">
-		          <p>Esta es una descripcion y precio</p>
-		          <p><a href="#">Link para comprar</a></p>
-		        </div>
-		      </div>
-		    </div>
-		     <!--CARDS 2-->
-		    <div class="col m6 s12">
-		      <div class="card medium">
-		        <div class="card-image">
-		          <img src="{% static 'img/reloj2.png'%}">
-		          <span class="card-title">Card Title</span>		          
-		        </div>
-		        <div class="card-content">
-		          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-		        </div>
-		      </div>
-		    </div>
-  </div>
-
- 	</div>
- 	</div>
-
-         <footer class="page-footer">
-          <div class="">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="black-text ">Footer Content</h5>
-                <p class="black-text  text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright ">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="black-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
-  
 </body>
 
 <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
-<script type="text/javascript" src="{% static 'js/materialize.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/materialize.js'%}"></script>
 <script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+
 </html>
