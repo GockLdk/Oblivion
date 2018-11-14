@@ -1,12 +1,116 @@
-<div>
-	<h1>Inicia Sesion</h1>
-	<form method="POST">
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Scope+One|Secular+One" rel="stylesheet"> 
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Code+Pro" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet"> 
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.css'%}"  media="screen,projection"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body class="white">
+
+	<!-- NAVBAR -->
+	<div class="navbar-fixed ">
+		<nav>
+			<div class="nav-wrapper">
+				<a href="{% url 'inicio' %}" class="brand-logo left hide-on-small-only"><img src="{% static 'img/relojlogo.png' %}" height="50" width=auto alt="auto"></a>
+				<a href="{% url 'inicio' %}" class="brand-logo center hide-on-med-and-up show-on-small-only"><img src="img/relojlogo.png" height="35" width=auto alt="auto"></a>
+
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-med-and-up show-on-small"><i class="material-icons">menu</i></a>
+
+				<ul class="right hide-on-small-only">
+					<li><a href="{% url 'colecciones' %}">Coleccion</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	
+	<!-- SIDE NAVBAR -->
+	<ul class="sidenav show-on-small-only hide-on-med-and-up" id="mobile-demo">
+		<li><a class="sidenav-close white-text" href="#!"><i class="material-icons white-text">arrow_back</i></a></li>   
+		<li><a href="{% url 'inicio' %}" class="brand-logo white-text">Logo</a></li>
+		<li><a href="{% url 'colecciones' %}">Coleccion</a></li>
+		<li><a href="{% url 'registrate' %}" class="white-text">Registrarse</a></li>
+			
+
+	</ul>
+
+	<div class="row gh">
+		<img src="{% static 'img/login.jpg'%}">
+	</div>
+
+
+	<br>
+
+	<h3 class="white-text reg" style="font-size:4.5vh" >INICIA SESION</h3><br>
+<br><br>
+
+	<div class="container">
+		<div class="row">
+			<form method="POST">
 		{% csrf_token %} <!-- Genera un token aleatoriamente para ocultar el id -->
 		{{ form.as_p }} <!-- Traeme el formulario como etiquetas p -->
-		<button type="submit">Enviar</button>
-	</form>
-</div>
-<div>
-	<a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a><br>
-	<a href="{% url 'inicio' %}">Cancelar</a>
-</div>
+		<button type="submit">Iniciar Sesion</button>
+</form>
+					</div>
+					<div class="input-field col s6">	
+						<a href="{% url 'password_reset' %}" class="right">Si olvidaste tu contraseña da click aquí</a><br>
+						<a href="{% url 'registrate' %}"  class="right">¿No tienes una cuenta? Regístrate</a>
+					</div>
+				</div>
+		
+		</div>
+
+	</div>
+
+	<!--FOOTER-->
+	<footer class="page-footer center">
+		<div class="row">
+          <div class="col l4 s12">
+            <h6 class="white-text">Síguenos</h6>
+            <ul>
+              <a class="github-button" href="https://github.com/GockLdk" aria-label="Follow @amairanysolanamejia on GitHub">Follow @GockLdk</a><br>
+              <a class="github-button" href="https://github.com/anallely753" aria-label="Follow @amairanysolanamejia on GitHub">Follow @anallely753</a><br>
+              <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/KarinaFloG" aria-label="Follow @GodieSillasca on GitHub">Follow @GodieSillasca</a>
+            </ul>
+          </div>
+           <div class="col l4 s12 ayuda">
+            
+          </div>
+          <div class="col l4 s12 ayuda">
+            <h6 class="white-text">¿Necesitas ayuda?</h6>
+            <p class="white-text">Llámanos al 5134.0034<br>
+            o al 01800.367.8737</p>
+          </div>
+        </div>
+      <div class="row todos center white-text">
+           Todos los derechos reservados  |  ANMADI ® 2018 
+      </div>
+      <br>
+	</footer>
+
+</body>
+
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/materialize.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/app.js'%}"></script>
+
+</html>
