@@ -7,6 +7,9 @@ from .forms import UserCreateForm
 # Create your views here.
 
 def registrate(request):
+	"""
+	Este método recibe una solicitud y nos ayuda a registrar nuevos usuarios.
+	"""
 	if request.method == 'POST':
 		form = UserCreateForm(request.POST)
 		if form.is_valid():
