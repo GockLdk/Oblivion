@@ -1,0 +1,219 @@
+.slider .indicators .indicator-item {
+  background-color: #666666;
+  border: 0px solid #ffffff;
+  -webkit-box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.slider .indicators .indicator-item.active {
+  background-color: #ffffff;
+}
+
+.coleccion{
+  height: 70vh;
+  background-color: gray;
+}
+
+iframe{
+
+  height: 60vh;
+  width: 80vw;
+}
+.slider {
+  width: 100vw;
+  margin: 0 auto;
+}
+.slider .indicators {
+  bottom: 0px;
+  z-index: 100;
+  /* text-align: left; */
+}
+.gh{
+  height: 20vh;
+  line-height: 200px;
+  background-color: gray;
+}
+
+
+.parallax-container{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.reg{
+  font-family: 'Secular One', sans-serif;
+}
+.l9{
+
+  overflow: hidden;
+}
+
+.index{
+	background-color: black;
+}
+
+.sidenav{
+	background-color: black;
+	color: white;
+}
+
+.sidenav li{
+	color: white;
+}
+
+.fila1{
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+}
+ 
+.texto-encima{
+    font-size: 2vw;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-content: center;
+    float: center;
+    font-size: 50px;
+    color: white;
+    padding: 40px;
+}
+.texto-encima2{
+    font-size: 2vw;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    align-content: center;
+    float: center;
+    font-size: 50px;
+    color: white;
+    padding: 0px;
+}
+
+.guapo{
+	margin: 0px;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.white{
+  background-color: white;
+}
+
+.logonav{
+	padding-left: 30px;
+}
+
+header{
+	background: url(img/portada.jpg) no-repeat fixed center;
+}
+
+.iniciosesion{
+  background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+.index{
+	background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.carousel .firstp{
+	background-image: url("../img/portada.jpg");
+	 background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+.carousel .firstd{
+  background-image: url("../img/reloj.jpg");
+   background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+
+
+  .nav-wrapper .brand-logo{
+  	margin-top: 7px;
+  }
+
+#search{
+	background-color: lightgray;
+}
+
+  .material-icons{
+  	color: black;
+  }
+
+
+h1{
+	color: white;
+}
+
+h3{
+	margin: 0px;
+	padding: 15px;
+	color: gray;
+	text-align: center;
+  	font-family: 'Scope One', serif;
+}
+
+  .portada{
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  .nav-wrapper{
+  	padding: 0px;
+  	margin: 0px;
+  	background-color: white;
+  	padding-left: 0px;
+  	padding-right: 0px;
+  }
+
+  .nav-wrapper a{
+  	color: 	gray;
+  	font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .sidenav a{
+  	color: 	white;
+  	font-family: 'Roboto Condensed', sans-serif;
+  }
+
+
+
+  .row{
+  	padding: 0px;
+  	margin: 0px;
+  }
+
+  .page-footer{
+  	background-color: #222222;
+  	margin-bottom: 0px;
+  	padding-bottom: 0px;
+  }
+
+   .page-footer li{
+  	background-color: lightgray;
+  	color: black;
+  }
+
+  .card-image img{
+  	height: 50%;
+  	width: auto;
+  }
+
+  .footer-copyright{
+  	background-color: #222222;
+  }
