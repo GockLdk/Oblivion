@@ -1,3 +1,7 @@
+"""
+Estas son las funciones que utilizan las view del proyecto de Django, la tienda de relojes. Leer atentamente para el correcto funcionamiento.
+"""
+
 def registrate(request):
 	"""
 	Esta función recibe una solicitud y nos ayuda a registrar nuevos usuarios.
